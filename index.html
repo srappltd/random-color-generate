@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <button>Generate color</button>
+        <div class="bottom">
+            <input type="text" class="p">
+            <p class="pr"></p>
+        </div>
+    </div>
+
+
+    <script>
+        var main = document.querySelector('#main');
+        var button = document.querySelector("button");
+        var p = document.querySelector(".p");
+        var pr = document.querySelector(".pr");
+        button.addEventListener("click",function(){
+            // alert("Please enter")
+            var a = Math.floor(Math.random()*255);
+            var b = Math.floor(Math.random()*255);
+            var c = Math.floor(Math.random()*255);
+            var d = Math.floor(Math.random()*255);
+            var e = Math.floor(Math.random()*255);
+            var f = Math.floor(Math.random()*255);
+
+            var h = Math.floor(Math.random()*255);
+            var i = Math.floor(Math.random()*255);
+            var j = Math.floor(Math.random()*255);
+            var k = Math.floor(Math.random()*255);
+            var l = Math.floor(Math.random()*255);
+            var m = Math.floor(Math.random()*255);
+            
+            //radius
+            var g = Math.floor(Math.random()*360);
+            var x = Math.floor(Math.random()*360);
+
+            main.style.background = `linear-gradient(${g}deg,rgb(${a}, ${b}, ${c}),rgb(${d}, ${e}, ${f}))`;
+            button.style.background = `linear-gradient(${x}deg,rgb(${h}, ${i}, ${j}),rgb(${k}, ${l}, ${m}))`;
+
+            var x = `${g}deg,rgb(${a}, ${b}, ${c}),rgb(${d}, ${e}, ${f})`;
+            var y = pr.innerHTML = x;
+            p.value =pr.textContent;
+
+        })
+    </script>
+</body>
+</html>
